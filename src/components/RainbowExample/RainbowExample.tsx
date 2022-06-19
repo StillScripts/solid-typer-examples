@@ -27,7 +27,7 @@ const RainbowTypewriter: Component = () => {
 
   return (
     <h3>
-      Rainbow typewriter:{" "}
+      Rainbow:{" "}
       <span style={{ color: `${rainbowColors[colorIndex() % 7]}` }}>
         <SolidTyper
           text={rainbowWords}

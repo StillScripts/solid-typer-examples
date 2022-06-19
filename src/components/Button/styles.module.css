@@ -1,15 +1,14 @@
 .btn {
-	background-color: green;
+	background-color: rgb(23, 121, 23);
 	color: #fff; 
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 	padding: 0.5rem 1rem;
-	border: 1px solid #fff;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	font-weight: 600;
 	text-transform: uppercase;
 }
 
 .btn:hover {
-	background-color: darkgreen;
+	background-color: rgb(9, 85, 9);
 }

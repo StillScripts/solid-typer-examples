@@ -15,7 +15,7 @@ const MatrixExample: Component<MatrixExampleProps> = ({ callback }) => {
           "Follow the white rabbit.",
           "Knock, knock, Neo.",
         ]}
-        backspaceSpeed={40}
+        backspaceSpeed={30}
         typingSpeed={100}
         onFinish={callback}
       />
