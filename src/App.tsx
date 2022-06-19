@@ -1,6 +1,7 @@
 import { Component, createSignal, Match, Show, Switch } from "solid-js";
 import { Button, MatrixExample, RainbowExample } from "./components";
 import styles from "./App.module.css";
+import rabbit from "./assets/rabbit.png";
 
 const App: Component = () => {
   const [example, setExample] = createSignal<"matrix" | "rainbow">("matrix");
@@ -75,10 +76,24 @@ const App: Component = () => {
         </main>
       </div>
       <footer>
-        <div>Made by Daniel Still</div>
+        <div class={styles.author}>
+          <span>Made by </span>
+          <a href="https://github.com/StillScripts" target="_blank">
+            @StillScripts
+            {/* <img
+              src={rabbit}
+              width={28}
+              height={28}
+              style={{ "border-radius": "100%" }}
+            /> */}
+          </a>
+        </div>
         <div>
-          <a href="https://github.com/StillScripts/solid-typer" target="_blank">
+          <a style={{"margin-right": "8px"}} href="https://github.com/StillScripts/solid-typer-examples" target="_blank">
             Source Code
+          </a>
+          <a href="https://github.com/StillScripts/solid-typer" target="_blank">
+            Documentation
           </a>
         </div>
       </footer>
