@@ -1,7 +1,7 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "solid-typer-examples",
+  "version": "0.0.1",
+  "description": "Examples of text-typing animations using the solid-typer library",
   "scripts": {
     "start": "vite",
     "dev": "vite",
