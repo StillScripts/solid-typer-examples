@@ -50,7 +50,10 @@ const App: Component = () => {
                   }
                 : {}
             }
-            onClick={() => setExample("rainbow")}
+            onClick={() => {
+              setExample("rainbow");
+              setShowNext(true);
+            }}
           >
             Rainbow
           </button>
@@ -67,11 +70,9 @@ const App: Component = () => {
             </Match>
           </Switch>
           <Show when={showNext()}>
-            <div>
-              <Button callback={handleNext} show={showNext()}>
-                Show Next
-              </Button>
-            </div>
+            <Button callback={handleNext} show={showNext()}>
+              Show Next Example
+            </Button>
           </Show>
         </main>
       </div>
@@ -88,8 +89,11 @@ const App: Component = () => {
             /> */}
           </a>
         </div>
-        <div>
-          <a style={{"margin-right": "8px"}} href="https://github.com/StillScripts/solid-typer-examples" target="_blank">
+        <div class={styles.docs}>
+          <a
+            href="https://github.com/StillScripts/solid-typer-examples"
+            target="_blank"
+          >
             Source Code
           </a>
           <a href="https://github.com/StillScripts/solid-typer" target="_blank">

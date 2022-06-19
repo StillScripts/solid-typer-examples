@@ -1,6 +1,5 @@
 import { Component, createSignal } from "solid-js";
 import { SolidTyper } from "solid-typer";
-import styles from "./styles.module.css";
 
 // Types and variables for the rainbow typing animation
 type Rainbow =
@@ -32,7 +31,7 @@ const RainbowTypewriter: Component = () => {
         <SolidTyper
           text={rainbowWords}
           cursor
-					cursorClassName={styles.cursor}
+					cursorClassName="cursor"
           loop
           onBackspaceEnd={() => {
             setColorIndex(colorIndex() + 1);

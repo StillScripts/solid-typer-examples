@@ -2,9 +2,9 @@ header {
   padding: 2rem 3rem;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
-
 
 main {
 	padding: 0rem 3rem;
@@ -16,6 +16,7 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2rem 3rem;
+  font-size: 0.825rem;
 }
 
 footer div {
@@ -44,4 +45,10 @@ footer div {
 
 .link:hover {
   color: rgba(255, 255, 255, 0.9)
+}
+
+.docs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
