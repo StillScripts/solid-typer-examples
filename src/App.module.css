@@ -1,0 +1,36 @@
+main {
+	padding: 3rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 3rem;
+}
+
+footer div {
+  margin: 0.25rem 0;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: rgb(15, 15, 15);
+  overflow: hidden;
+}
+
+.btn {
+  color: #fff;
+  background-color: green;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
