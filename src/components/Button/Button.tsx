@@ -1,7 +1,7 @@
 import { Component, Show } from "solid-js";
 import { Motion, Presence } from "@motionone/solid";
 
-import styles from "./styles.module.css";
+import styles from "./Button.module.css";
 
 interface ButtonProps {
   children: string;

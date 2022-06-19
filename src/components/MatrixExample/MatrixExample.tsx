@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 import { SolidTyper } from "solid-typer";
-import styles from "./styles.module.css";
+import styles from "./MatrixExample.module.css";
 
 interface MatrixExampleProps {
   callback: () => void;
