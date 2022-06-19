@@ -1,5 +1,13 @@
+header {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
 main {
-	padding: 3rem;
+	padding: 0rem 3rem;
 }
 
 footer {
@@ -26,11 +34,19 @@ footer div {
   overflow: hidden;
 }
 
-.btn {
-  color: #fff;
-  background-color: green;
-  border: 2px solid #fff;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
+.link {
+  margin-right: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
   cursor: pointer;
+  border: none;
+}
+
+.link:hover {
+  color: rgba(255, 255, 255, 0.9)
+}
+
+.selected {
+  text-decoration: underline;
+  background-color: blue;
 }
