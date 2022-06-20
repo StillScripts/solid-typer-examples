@@ -1,14 +1,15 @@
 import { Component, createSignal, For, Match, Show, Switch } from "solid-js";
 import {
   Button,
+  DadJokesExample,
   MatrixExample,
   MemeExample,
   RainbowExample,
 } from "./components";
 import styles from "./App.module.css";
 
-type Example = "matrix" | "meme" | "rainbow";
-const examples: Example[] = ["matrix", "meme", "rainbow"];
+type Example = "matrix" | "jokes" | "meme" | "rainbow";
+const examples: Example[] = ["matrix", "jokes", "rainbow"];
 
 const App: Component = () => {
   const [example, setExample] = createSignal<Example>("matrix");
@@ -17,9 +18,9 @@ const App: Component = () => {
   const handleNext = () => {
     switch (example()) {
       case "matrix":
-        setExample("meme");
+        setExample("jokes");
         break;
-      case "meme":
+      case "jokes":
         setExample("rainbow");
         break;
       case "rainbow":
@@ -52,6 +53,9 @@ const App: Component = () => {
             <Match when={example() === "matrix"}>
               <MatrixExample callback={() => setShowNext(true)} />
             </Match>
+            <Match when={example() === "jokes"}>
+              <DadJokesExample />
+            </Match>
             <Match when={example() === "meme"}>
               <MemeExample />
             </Match>
@@ -67,12 +71,12 @@ const App: Component = () => {
         </main>
       </div>
       <footer>
-        <div>
+        {/* <div>
           Made by
           <a href="https://github.com/StillScripts" target="_blank">
             @StillScripts
           </a>
-        </div>
+        </div> */}
         <div class={styles.docs}>
           <a
             href="https://github.com/StillScripts/solid-typer-examples"

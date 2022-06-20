@@ -41,7 +41,7 @@ const MemeExample: Component = () => {
 
   return (
     <div>
-      <h2 style={{ height: "2rem" }}>
+      <h2 style={{ "min-height": "2rem" }}>
         <SolidTyper
           text={sentences}
           backspaceSpeed={10}
