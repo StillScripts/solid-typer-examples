@@ -17,6 +17,6 @@
   "dependencies": {
     "@motionone/solid": "^10.10.0",
     "solid-js": "^1.4.2",
-    "solid-typer": "^0.0.1"
+    "solid-typer": "^0.0.2"
   }
 }

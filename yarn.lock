@@ -753,10 +753,10 @@ solid-refresh@^0.4.0:
     "@babel/helper-module-imports" "^7.16.0"
     "@babel/types" "^7.16.0"
 
-solid-typer@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/solid-typer/-/solid-typer-0.0.1.tgz#737269820460cfc0c8ae8e0930685dc5460db6f8"
-  integrity sha512-gsVHk0KKOS8+ePwDQza9whHSDQG2OlYNJAHsA/jTL5wOiYREjv85F65gjgTOX57scg+gb1rFuKdGisZtsC4B9w==
+solid-typer@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/solid-typer/-/solid-typer-0.0.2.tgz#2fa4547015f956b297ab2d27bc985b52ff662c4e"
+  integrity sha512-3jsXZTUnmHUGU+HSk+ayvAWNsplm0pGY7BKyB4JPvnzbYk48pNkgzGeXFLvwpFt64i9Zl6A4ZyjVQoIz0broFg==
 
 source-map-js@^1.0.2:
   version "1.0.2"
