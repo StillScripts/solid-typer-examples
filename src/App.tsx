@@ -1,15 +1,25 @@
-import { Component, createSignal, Match, Show, Switch } from "solid-js";
-import { Button, MatrixExample, RainbowExample } from "./components";
+import { Component, createSignal, For, Match, Show, Switch } from "solid-js";
+import {
+  Button,
+  MatrixExample,
+  MemeExample,
+  RainbowExample,
+} from "./components";
 import styles from "./App.module.css";
-import rabbit from "./assets/rabbit.png";
+
+type Example = "matrix" | "meme" | "rainbow";
+const examples: Example[] = ["matrix", "meme", "rainbow"];
 
 const App: Component = () => {
-  const [example, setExample] = createSignal<"matrix" | "rainbow">("matrix");
+  const [example, setExample] = createSignal<Example>("matrix");
   const [showNext, setShowNext] = createSignal(false);
 
   const handleNext = () => {
     switch (example()) {
       case "matrix":
+        setExample("meme");
+        break;
+      case "meme":
         setExample("rainbow");
         break;
       case "rainbow":
@@ -24,39 +34,16 @@ const App: Component = () => {
     <div class={styles.container}>
       <div>
         <header>
-          <button
-            class={styles.link}
-            style={
-              example() === "matrix"
-                ? {
-                    color: "rgba(255, 255, 255, 0.9)",
-                    "text-decoration": "underline",
-                    "text-decoration-color": "#2DD623",
-                  }
-                : {}
-            }
-            onClick={() => setExample("matrix")}
-          >
-            Matrix
-          </button>
-          <button
-            class={styles.link}
-            style={
-              example() === "rainbow"
-                ? {
-                    color: "rgba(255, 255, 255, 0.9)",
-                    "text-decoration": "underline",
-                    "text-decoration-color": "#2DD623",
-                  }
-                : {}
-            }
-            onClick={() => {
-              setExample("rainbow");
-              setShowNext(true);
-            }}
-          >
-            Rainbow
-          </button>
+          <For each={examples}>
+            {(item) => (
+              <button
+                class={example() === item ? styles.activeLink : styles.link}
+                onClick={() => {setShowNext(true); setExample(item)}}
+              >
+                {item[0].toUpperCase()+item.substring(1)}
+              </button>
+            )}
+          </For>
         </header>
         <main>
           <Switch
@@ -65,28 +52,25 @@ const App: Component = () => {
             <Match when={example() === "matrix"}>
               <MatrixExample callback={() => setShowNext(true)} />
             </Match>
+            <Match when={example() === "meme"}>
+              <MemeExample />
+            </Match>
             <Match when={example() === "rainbow"}>
               <RainbowExample />
             </Match>
           </Switch>
           <Show when={showNext()}>
             <Button callback={handleNext} show={showNext()}>
-              Show Next Example
+              Next Example
             </Button>
           </Show>
         </main>
       </div>
       <footer>
-        <div class={styles.author}>
-          <span>Made by </span>
+        <div>
+          Made by
           <a href="https://github.com/StillScripts" target="_blank">
             @StillScripts
-            {/* <img
-              src={rabbit}
-              width={28}
-              height={28}
-              style={{ "border-radius": "100%" }}
-            /> */}
           </a>
         </div>
         <div class={styles.docs}>
