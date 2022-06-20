@@ -18,7 +18,7 @@ const Button: Component<ButtonProps> = ({ children, show, callback }) => {
           initial={{ opacity: 0, scale: 0.8, y: -12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
         >
           {children}
         </Motion.button>

@@ -7,7 +7,7 @@ header {
 }
 
 main {
-	padding: 0rem 3rem;
+  padding: 0.5rem 3rem;
 }
 
 footer {
@@ -23,7 +23,6 @@ footer div {
   margin: 0.25rem 0;
 }
 
-
 .container {
   display: flex;
   flex-direction: column;
@@ -36,7 +35,7 @@ footer div {
 }
 
 .link {
-  margin-right: 1rem;
+  margin-right: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   cursor: pointer;
@@ -44,7 +43,18 @@ footer div {
 }
 
 .link:hover {
-  color: rgba(255, 255, 255, 0.9)
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.activeLink {
+  margin-right: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  text-decoration-color: #2dd623;
 }
 
 .docs {
